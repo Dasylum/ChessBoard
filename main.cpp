@@ -518,7 +518,16 @@ int moveValidityChecker(int x, int y, int locationX, int locationY)
                     }
                 }
             case 6:
-                
+                if (abs(locationX - x) <= 1 && abs(locationY - y) <= 1) {
+
+                    swapFunc(x, y, locationX, locationY);
+                }
+
+                else {
+
+                    cout << "Not a valid move..." << endl;
+                }
+                break;
             }
         }
 
